@@ -1,0 +1,294 @@
+html {
+  background: #fff;
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+/** Время разбираться с контейнером **/
+
+.container {
+  padding: 0 20px;
+}
+
+header {
+  width: 100vw;
+  height: 105px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+
+
+.logo {
+  margin: 17px 0 10px 20px;
+}
+
+.account {
+  margin: 22px 20px 0 0;
+}
+
+.search {
+  background: #fff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+  display: block; 
+  border-top: 1px solid rgba(187, 196, 214, 0.5);
+  height: 40px;
+  flex-basis: 100vw;
+  flex-grow: 1; 
+}
+
+.search input {
+  font-size: 14px;
+  font-weight: 400;
+  color: #BBC4D6;
+  padding: 0 0 0 49px;
+  /* padding-left: 49px; */
+  height: 40px;
+  width: 295px;
+  border: none;
+  background: url('../img/search-loupe.svg') no-repeat;
+  background-position: 23px;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.search input::placeholder {
+  color: #BBC4D6;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.login {
+  display: none;
+}
+
+.title {
+  height: 45px;
+  margin: 70px 20px 30px 0;
+  display: flex;
+  align-items: center;
+}
+
+.title h1 {
+  margin: 0;
+  /* margin: auto 20px; */
+  font-size: 28px;
+  font-weight: 500;
+  color: #121920;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  line-height: 45px;
+  letter-spacing: 0;
+  text-align: left;
+
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 229px
+}
+
+.card {
+  cursor: pointer;
+  margin: 0 auto;
+  max-width: 335px;
+  max-height: 140px;
+  width: 335px;
+  height: 138px;
+  border: 1px solid #EBEBF1;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+
+  }
+
+  .logo {
+    order: 1;
+    margin: 25px 50px 25px 19px;
+
+  }
+
+  .account {
+    display: none;
+  }
+
+  .search {
+    width: 344px;
+    height: 40px;
+    box-shadow: none;
+    border: 1px solid #EBEBF1;
+    box-sizing: border-box;
+    border-radius: 5px;
+    flex-basis: 344px;
+    flex-grow: 0;
+    order: 2;
+    margin: 20px 50px 20px 0;
+  }
+
+  .search input {
+    width: calc(100% - 40px);
+    background-position: 12px 10px;
+    padding: 0 0 0 38px;
+    font-family: Roboto;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+  }
+
+  .search input:placeholder {
+    padding-bottom: 30px;
+  }
+
+  .login {
+    display: flex;
+    order: 3;
+    align-items: center;
+    width: 168px;
+    height: 80px;
+    border-left: 1px solid #EBEBF1;
+
+  }
+
+  .login p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    text-align: right;
+    color: #768298;
+    margin-left: 19px;
+    margin-right: 10px;
+
+  }
+
+  .login img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cards {
+    gap: 20px;
+    /* padding-left: 20px; */
+  }
+
+  .card {
+    cursor: pointer;
+    width: 227px;
+    height: 118px;
+    margin: 0 0;
+  }
+
+  .card a {
+    max-width: 200px; 
+    /* max-height: 90%; */
+  }
+  .card a img{
+    max-width: 200px; 
+    /* max-height: 90%; */
+  }
+
+  .cards > div:nth-child(1) > img {
+    width: 115px;
+  }
+  .cards > div:nth-child(2) > img {
+    width: 180px;
+  }
+  .cards > div:nth-child(3) > img {
+    width: 99px;
+  }
+  .cards > div:nth-child(4) > img {
+    width: 175px;
+  }
+  .cards > div:nth-child(5) > img {
+    width: 190px;
+  }
+  .cards > div:nth-child(6) > img {
+    width: 143px;
+  }
+  .cards > div:nth-child(7) > img {
+    width: 196px;
+    margin-bottom: 0;
+  }
+
+}
+
+
+@media (min-width: 1440px) {
+
+  header {
+    flex-wrap: nowrap;
+    justify-content: unset;
+  }
+
+  
+  .search {
+    flex-basis: 763px;
+    margin-right: 60px;
+  }
+  
+  .logo {
+    margin-left: 134px;
+    margin-right: 61px;
+  }
+  
+  .login {
+    width: 108px;
+    margin-right: 135px;
+  }
+
+  .container {
+    padding: 0 135px;
+  }
+
+  .title {
+    height: 58px;
+  }
+
+  .title h1 {
+    font-size: 36px;
+  }
+
+  .cards {
+    gap: 30px;
+  }
+
+  .card {
+    cursor: pointer;
+    width: 268px;
+    height: 120px;
+  }
+
+  .card:hover {
+    box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
+  }
+
+  .card a img {
+    max-width: 90%;
+  }
+
+  }
+
